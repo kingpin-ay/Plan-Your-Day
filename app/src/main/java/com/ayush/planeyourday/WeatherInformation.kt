@@ -13,22 +13,33 @@ import java.text.DecimalFormat
 
 
 class WeatherInformation : AppCompatActivity() {
-    lateinit var binding : ActivityWeatherInformationBinding
+
+    companion object Data{
+        const val DESTINATION_PLACE = "destination_place"
+        const val PRESENT_PLACE = "present_place"
+    }
+    private lateinit var binding : ActivityWeatherInformationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWeatherInformationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val presentAddress ="Chakdaha"
-        val destinationAddress = "Krishnanagar"
-        loadDataPresentAddress(presentAddress)
-        loadDataDestinationAddress(destinationAddress)
+        val pAddress = intent.getStringExtra(PRESENT_PLACE)
+        val dAddress = intent.getStringExtra(DESTINATION_PLACE)
+
+        Toast.makeText(this, "$pAddress", Toast.LENGTH_SHORT).show()
+
+        if (pAddress != null) {
+            loadDataPresentAddress(pAddress)
+        }
+        if (dAddress != null) {
+            loadDataDestinationAddress(dAddress)
+        }
     }
 
     @SuppressLint("SetTextI18n")
     private fun loadDataDestinationAddress(cityName: String){
         val apiKey = "0e045f9e85f0ce7d713b6a576863d510"
-
         val queue = Volley.newRequestQueue(this)
         val url= "https://api.openweathermap.org/data/2.5/forecast?q=$cityName&appid=$apiKey"
         val jsonObjectRequest = JsonObjectRequest(
@@ -101,7 +112,7 @@ class WeatherInformation : AppCompatActivity() {
 
     }
 
-    fun roundOffDecimal(number: Double): Double {
+    private fun roundOffDecimal(number: Double): Double {
         val df = DecimalFormat("#.##")
         df.roundingMode = RoundingMode.FLOOR
         return df.format(number).toDouble()

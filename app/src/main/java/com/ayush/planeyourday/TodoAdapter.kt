@@ -30,6 +30,8 @@ class TodoAdapter(
             presentLocation.text = todos[position].presentLocation
             destinationLocation.text = todos[position].destinationLocation
             dateData.text = todos[position].dateTime
+            TimeData.text = todos[position].time
+            description.text = todos[position].description
 
         }
 

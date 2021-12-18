@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     }
    private fun screenJumpToEventSet(){
-        val intent = Intent(this ,WeatherInformation::class.java)
+        val intent = Intent(this ,EventSetActivity::class.java)
         startActivity(intent)
     }
 

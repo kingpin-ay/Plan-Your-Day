@@ -23,6 +23,7 @@ class EventSetActivity : AppCompatActivity() {
 
         binding.make.setOnClickListener {
             val id : String
+            val hello :Int
             dataBase = FirebaseDatabase.getInstance(
                 "https://plane-your-day-789a8-default-rtdb.asia-southeast1.firebasedatabase.app").getReference(
                 "ToDo")

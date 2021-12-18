@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Plane Your Day</string>
+    <string name="launcher_background_image">Launcher Background Image</string>
+    <string name="icon_of_the_application">icon of the application</string>
+    <string name="chat_box_here">chat box here</string>
+    <string name="send_button_background_image">send button background image</string>
+    <string name="type_your_message">\t Type Your Message</string>
+    <string name="bot_profile">Bot profile</string>
+    <string name="status_picture">Status picture</string>
+    <string name="place_data_divider">place data divider</string>
+    <string name="arrow_key">arrow key</string>
+    <string name="enter">Enter</string>
+    <string name="to_do_list">To-Do-List</string>
+    <string-array name="activitiesString">
+        <item>Start</item>
+        <item>Make Your Plan</item>
+        <item>View Your Plan</item>
+    </string-array>
+</resources>

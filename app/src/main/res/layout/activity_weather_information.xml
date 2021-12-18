@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherInformation"
+    android:background="@drawable/ddd">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pageHolder"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="0dp"
+        android:background="@drawable/weather_information_holder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:padding="8dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="25dp"
+            android:id="@+id/leftSideDestinationView"
+            app:layout_constraintLeft_toLeftOf="@+id/pageHolder"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginStart="25dp"
+            android:id="@+id/leftSideDestinationDescription"
+            app:layout_constraintLeft_toLeftOf="@+id/pageHolder"
+            app:layout_constraintTop_toBottomOf="@+id/leftSideDestinationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginStart="25dp"
+            android:id="@+id/leftSideDestinationDescriptionStatus"
+            app:layout_constraintLeft_toLeftOf="@+id/pageHolder"
+            app:layout_constraintTop_toBottomOf="@+id/leftSideDestinationDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp"
+            android:padding="8dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/contentHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/weatherStatusPicture"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:contentDescription="@string/status_picture"
+                android:src="@drawable/icon"
+                tools:ignore="ImageContrastCheck" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/informationHolder"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:padding="12dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/informationStatus"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:background="@drawable/weather_information_text_background">
+
+                <TextView
+                    android:id="@+id/presentAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/presentAddressStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/presentAddress" />
+
+                <TextView
+                    android:id="@+id/presentAddressTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/presentAddressStatus"
+
+                    />
+
+                <TextView
+                    android:id="@+id/presentAddressMaxTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/presentAddressTemp" />
+
+                <TextView
+                    android:id="@+id/presentAddressMinTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/presentAddressMaxTemp" />
+
+                <TextView
+                    android:id="@+id/destinationAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/destinationAddressStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/destinationAddress" />
+
+                <TextView
+                    android:id="@+id/destinationAddressTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/destinationAddressStatus" />
+
+                <TextView
+                    android:id="@+id/destinationAddressMaxTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/destinationAddressTemp" />
+
+                <TextView
+                    android:id="@+id/destinationAddressMinTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/destinationAddressMaxTemp" />
+
+                <ImageView
+                    android:contentDescription="@string/place_data_divider"
+                    android:id="@+id/middleDivider"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="26dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@color/white"
+                    android:layout_marginBottom="40dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

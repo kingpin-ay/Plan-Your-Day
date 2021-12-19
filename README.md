@@ -18,4 +18,4 @@ Android 5.0 Lollipop and above devices.
 4. API
 
 ## Usage
-Download apk to run the app.
+Download Plan Your Day apk to run the app.

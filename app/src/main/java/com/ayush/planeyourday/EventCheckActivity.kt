@@ -42,7 +42,7 @@ class EventCheckActivity : AppCompatActivity() {
         binding = ActivityEventCheckBinding.inflate(layoutInflater)
         dRef = FirebaseDatabase.getInstance(
             "https://plane-your-day-789a8-default-rtdb.asia-southeast1.firebasedatabase.app").getReference(
-            "location")
+            "ToDo")
         dRef.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 if(p0.exists()){

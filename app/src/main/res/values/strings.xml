@@ -14,11 +14,11 @@
     <string name="place">Place ?</string>
     <string name="iconbar">iconBar</string>
     <string name="where_you_want_to_go">Where you want to go ?</string>
-    <string name="please_write_your_answer">Please Write Your Answer</string>
+    <string name="please_write_your_answer">Click here to write your answer</string>
     <string name="what_is_your_current_location">What is your current location ?</string>
     <string name="reaching_time_at_that_place">Reaching time at that place ?</string>
     <string name="make">Make</string>
-    <string name="date_of_the_event">Date of the event ?</string>
+    <string name="date_of_the_event">Date of the event ?(DD-MM-YYYY)</string>
     <string name="purpose">Purpose ?</string>
     <string-array name="activitiesString">
         <item>Start</item>

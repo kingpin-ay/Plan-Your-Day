@@ -18,20 +18,7 @@ class EventCheckActivity : AppCompatActivity() {
         binding = ActivityEventCheckBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val todoList = mutableListOf(
-//            Todo("chakdaha","krishnanagar","12/7/2002","2.30 PM",
-//                " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
-//            Todo("chakdaha","krishnanagar","12/7/2002","2.30 PM",
-//                " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
-//            Todo("chakdaha","krishnanagar","12/7/2002","2.30 PM",
-//                " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
-//            Todo("chakdaha","krishnanagar","12/7/2002","2.30 PM",
-//                " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
-//            Todo("chakdaha","krishnanagar","12/7/2002","2.30 PM",
-//                " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
-//            Todo("chakdaha","krishnanagar","12/7/2002","2.30 PM",
-//                " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum")
-//        )
+
 
 
 //        binding.todoList.adapter = TodoAdapter(todoList)
